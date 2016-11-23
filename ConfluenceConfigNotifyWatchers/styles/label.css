@@ -1,0 +1,14 @@
+body {
+    min-width:200px;
+}
+
+.radioButtonTextNotNotify {
+	background: #3434ff;
+	color: white;
+}
+
+.radioButtonTextNotify {
+    background: #27930e;
+    color: white;
+}
+

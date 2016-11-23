@@ -1,0 +1,32 @@
+{
+  "manifest_version": 2,
+  
+  "name": "Confluence Notify Watchers Config (Guidewire)",
+  "author": "Sky Liu",
+  "short_name": "Confluence Notify Watchers Config",
+  "description": "Configure Guidewire Confluence page edit mode to notify/not-notify watchers",
+  "icons": {
+    "128": "images/Guidewire_Confluence.png"
+  },
+  "browser_action": {
+    "default_icon": "images/Guidewire_Confluence.png",
+    "default_popup": "html/popup.html"
+  },
+  "version": "0.0.1",
+  
+  "content_scripts": [
+	{
+	  "all_frames": true,
+	  "matches": [
+		"https://confluence.guidewire.com/*"
+	  ],
+	  "js": ["scripts/jquery-1.11.2.min.js", "scripts/notify_watchers_config.js"],
+	  "css": ["styles/label.css"]
+	}
+  ],
+  "permissions": [
+	"https://confluence.guidewire.com/*",
+    "storage",
+    "tabs"
+  ]
+}
